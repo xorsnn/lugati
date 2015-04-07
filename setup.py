@@ -14,7 +14,7 @@ setup(
     author_email='dev@lugati.ru',
     packages=[
         'lugati', 'lugati.lugati_admin',
-        'lugati.lugati_callbacks', 'lugati.lugati_feedback',
+        'lugati.lugati_feedback',
         'lugati.lugati_media', 'lugati.lugati_media.lugati_gallery',
         'lugati.lugati_mobile', 'lugati.lugati_payment',
         'lugati.lugati_payment.lugati_coinbase', 'lugati.lugati_payment.lugati_mycelium',

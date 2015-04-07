@@ -100,29 +100,6 @@ def get_coinbase_invoce(request):
     res_dt['price'] = str(round(cart_total_btc, 5))
     return HttpResponse(json.dumps(res_dt))
 
-
-# #send_to_waiter
-# def send_notofication(msg = ''):
-# #xmpp
-# #your_jid = 'xors.nn@gmail.com'
-#     #your_password = 'OhN3Ag3Uid'
-#     your_jid = 'lugatiname1@gmail.com'
-#     your_password = 'gmujnm567'
-#     target_jid = 'xors.nn@gmail.com'
-#     if msg == '':
-#         message = 'http://lugati.ru:9004/catalog/point_of_sale/2/#/order_details/37'
-#     else:
-#         message = msg
-#     send_message(your_jid, your_password, target_jid, message)
-#     #~xmpp
-# #
-
-# @csrf_exempt
-# def coinbase_callback_testing(request):
-#     logger.info('test1  !')
-#     send_notofication()
-#     return HttpResponse()
-
 @csrf_exempt
 def coinbase_callback(request, ticket=''):
     logger.info('ticket -> ' + ticket)
