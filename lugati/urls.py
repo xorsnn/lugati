@@ -3,7 +3,6 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
 
     url(r'^api/', include('lugati.api_urls', namespace='api')),
-    url(r'^callbacks/', include('lugati.lugati_callbacks.urls', namespace='callbacks')),
     url(r'^products/', include('lugati.products.urls', namespace='products')),
     url(r'^catalog/', include('lugati.lugati_shop.urls', namespace='shop')),
     url(r'^payment/', include('lugati.lugati_payment.urls', namespace='lugati_payment')),
