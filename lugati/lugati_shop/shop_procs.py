@@ -42,13 +42,6 @@ class Capturer(QtCore.QObject):
             # self.doCapture()
 
     def capture(self, html_str):
-
-        # f = open('/home/xors/workspace/pycharm/lugati_e_commerce/lugati_html_str.txt', 'r')
-        # st = f.read()
-        # f.close()
-
-
-
         self.wb.mainFrame().setHtml(html_str)
         while not (self.saw_initial_layout and self.saw_document_complete):
             self.loop.processEvents()
@@ -80,15 +73,4 @@ class Capturer(QtCore.QObject):
         tb_image.save()
         # QtCore.QCoreApplication.instance().quit()
         return tb_image
-    # def lugati_close(self):
-    #     QtCore.QCoreApplication.instance().quit()
 
-# app.exec_()
-# capturer = Capturer()
-
-def get_img(html_str):
-
-    # capturer = Capturer()
-    # img = capturer.capture(html_str)
-    # capturer.lugati_close()
-    return img

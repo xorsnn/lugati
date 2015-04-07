@@ -57,9 +57,6 @@ class Capturer(QtCore.QObject):
 
     def capture(self, html_str):
 
-        # f = open('/home/xors/workspace/pycharm/lugati_e_commerce/lugati_html_str.txt', 'r')
-        # html_str = f.read()
-        # f.close()
         logger.info('1')
         self.wb = QtWebKit.QWebPage()
         self.wb.loadFinished.connect(self.loadFinishedSlot)
