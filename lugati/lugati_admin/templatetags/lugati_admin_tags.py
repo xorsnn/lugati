@@ -15,6 +15,7 @@ from django.contrib.contenttypes.models import ContentType
 from lugati import lugati_procs
 from lugati.lugati_registration.models import LugatiUserProfile, LugatiRole
 from lugati.lugati_shop.models import ShoppingPlace
+from django.contrib.sites.models import Site
 
 from django.core.urlresolvers import resolve, reverse
 register = Library()
@@ -210,7 +211,8 @@ def is_lugati_editing():
 
 @register.simple_tag
 def get_cur_logo():
-    if settings.SITE_ID == 6:
+    site = Site.objects.get(pk=settings.SITE_ID)
+    if site.name == 'mps':
         return settings.POS_SERVER + '/media/custom/mps/img/small_logo.png'
     else:
         return settings.POS_SERVER + '/media/custom/lugati_site/img/logo_small.png'
