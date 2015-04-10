@@ -9,7 +9,7 @@ reload(sys).setdefaultencoding("UTF-8")
 
 setup(
     name='lugati',
-    version='0.1.2',
+    version='0.1.3',
     author='Sergey Grigorev',
     author_email='dev@lugati.ru',
     packages=[
