@@ -117,7 +117,8 @@ def mps_logo_block(context):
             'menu_padding': '70px',
             'logo_padding': '15px 0'
         }
-        if settings.SITE_ID == 6:
+        site = Site.objects.get(pk=settings.SITE_ID)
+        if site.name == 'mps':
             res_dt['logo_url'] = '/media/custom/mps/img/small_logo.png'
         else:
             res_dt['logo_url'] = '/media/custom/lugati_site/img/logo_small.png'
