@@ -122,7 +122,8 @@ class LugatiCompany(models.Model):
             return img.get_thumbnail('150x150', get_native_image=True).url
         else:
             if request:
-                if settings.SITE_ID == 6:
+                site = Site.objects.get(pk=settings.SITE_ID)
+                if site.name == 'mps':
                     return '/media/custom/mps/img/small_logo.png'
                 else:
                     return '/media/custom/lugati_site/img/logo_small.png'
